@@ -20,17 +20,17 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
 
         Сonstruction СonstructionClassSeat = new Сonstruction();
 
-        public void AddSeat(Data DataClass)
+        public void AddSeat(Data DataClass, OptionsInventor OptionsInventorClass)
         {
             // построение модели 
             this._couplingSeats = DataClass.couplingSeatsForm(-1);
-            _Sketch = DataClass.oCompDefForm().Sketches.Add(DataClass.oCompDefForm().WorkPlanes[3]);
+            _Sketch = OptionsInventorClass.oCompDefForm().Sketches.Add(OptionsInventorClass.oCompDefForm().WorkPlanes[3]);
 
             _Sketch.SketchLines.AddAsTwoPointRectangle
-                (DataClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(-DataClass.widthSeatForm(-1), -DataClass.widthSeatForm(-1)),
-                DataClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(DataClass.widthSeatForm(-1), DataClass.widthSeatForm(-1)));
+                (OptionsInventorClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(-DataClass.widthSeatForm(-1), -DataClass.widthSeatForm(-1)),
+                OptionsInventorClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(DataClass.widthSeatForm(-1), DataClass.widthSeatForm(-1)));
 
-            СonstructionClassSeat.Const(DataClass.oCompDefForm(), _Sketch, DataClass.thicknessSeatsForm(-1), _couplingSeats);
+            СonstructionClassSeat.Const(OptionsInventorClass.oCompDefForm(), _Sketch, DataClass.thicknessSeatsForm(-1), _couplingSeats);
 
         }
         

@@ -61,6 +61,7 @@
     <Compile Include="Init.cs" />
     <Compile Include="leg.cs" />
     <Compile Include="newProject.cs" />
+    <Compile Include="OptionsInventor.cs" />
     <Compile Include="Progam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

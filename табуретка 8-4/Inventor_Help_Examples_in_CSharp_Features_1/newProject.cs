@@ -15,14 +15,15 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
 {
     class newProject
     {
-        private PartDocument _oPartDoc1 = default(PartDocument);
-        private PartComponentDefinition _oCompDef1 = default(PartComponentDefinition);
+        private PartDocument _oPartDoc = default(PartDocument);
+        private PartComponentDefinition _oCompDef = default(PartComponentDefinition);
         private  Inventor.Application _ThisApplication;
 
         private Seat seatClass;
         private leg legClass;
         private Progam progClass;
         private Progam sideBarClass;
+        private OptionsInventor OptionsInventorClass;
 
         private bool _Init; 
         public newProject(Inventor.Application _ThisApplication)
@@ -32,10 +33,11 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
         }
         public void calculation()
         {
-            _oPartDoc1 = (PartDocument)_ThisApplication.Documents.Add(DocumentTypeEnum.kPartDocumentObject,
+            _oPartDoc = (PartDocument)_ThisApplication.Documents.Add(DocumentTypeEnum.kPartDocumentObject,
             _ThisApplication.FileManager.GetTemplateFile(DocumentTypeEnum.kPartDocumentObject));
+            _oCompDef = _oPartDoc.ComponentDefinition;
 
-            _oCompDef1 = _oPartDoc1.ComponentDefinition;
+            OptionsInventorClass = new OptionsInventor(_ThisApplication, _oCompDef);
 
             seatClass = new Seat();
             legClass = new leg();
@@ -54,25 +56,15 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
                 seatClass.Delete();
             }
 
-            seatClass.AddSeat(DataClass);
-            legClass.AddLeg(DataClass);
-            progClass.AddProgam(DataClass);
+            seatClass.AddSeat(DataClass, OptionsInventorClass);
+            legClass.AddLeg(DataClass, OptionsInventorClass);
+            progClass.AddProgam(DataClass, OptionsInventorClass);
 
             DataClass.distanceProgamForm(DataClass.distanceSideBarForm(-1));
             DataClass.thicknessProgamForm(DataClass.thicknessSideBarForm(-1));
-            sideBarClass.AddProgam(DataClass);
+            sideBarClass.AddProgam(DataClass, OptionsInventorClass);
 
             _Init = true;
-        }
-
-        public PartDocument oPartDoc()
-        {
-            return _oPartDoc1;
-        }
-
-        public PartComponentDefinition oCompDef()
-        {
-            return _oCompDef1;
         }
     }
 }

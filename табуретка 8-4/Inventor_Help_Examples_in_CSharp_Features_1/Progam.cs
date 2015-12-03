@@ -22,23 +22,23 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
 
         Сonstruction СonstructionClassProd = new Сonstruction();
 
-        public void AddProgam(Data DataClass)
+        public void AddProgam(Data DataClass, OptionsInventor OptionsInventorClass)
         {
             TransientGeometry _TG = default(TransientGeometry);
-            _TG = DataClass.ThisApplicationForm().TransientGeometry;
+            _TG = OptionsInventorClass.ThisApplicationForm().TransientGeometry;
 
-            _WPs[0] = DataClass.oCompDefForm().WorkPoints.AddFixed(_TG.CreatePoint(0, 0, -DataClass.distanceProgamForm(-1)));
-            _WPs[1] = DataClass.oCompDefForm().WorkPoints.AddFixed(_TG.CreatePoint(0, 4, -DataClass.distanceProgamForm(-1)));
-            _WPs[2] = DataClass.oCompDefForm().WorkPoints.AddFixed(_TG.CreatePoint(4, 0, -DataClass.distanceProgamForm(-1)));
+            _WPs[0] = OptionsInventorClass.oCompDefForm().WorkPoints.AddFixed(_TG.CreatePoint(0, 0, -DataClass.distanceProgamForm(-1)));
+            _WPs[1] = OptionsInventorClass.oCompDefForm().WorkPoints.AddFixed(_TG.CreatePoint(0, 4, -DataClass.distanceProgamForm(-1)));
+            _WPs[2] = OptionsInventorClass.oCompDefForm().WorkPoints.AddFixed(_TG.CreatePoint(4, 0, -DataClass.distanceProgamForm(-1)));
 
             for (int i = 0; i < _WPs.LongLength; i++)
                 _WPs[i].Visible = false;
 
-            _WP = DataClass.oCompDefForm().WorkPlanes.AddByThreePoints(_WPs[0], _WPs[1], _WPs[2]);
+            _WP = OptionsInventorClass.oCompDefForm().WorkPlanes.AddByThreePoints(_WPs[0], _WPs[1], _WPs[2]);
 
             _WP.Visible = false;
 
-            _Sketch = DataClass.oCompDefForm().Sketches.Add(_WP);
+            _Sketch = OptionsInventorClass.oCompDefForm().Sketches.Add(_WP);
 
             double[,] array =
             {
@@ -51,11 +51,11 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
             for (int i = 0; i < 4; i++)
             {
                 _Sketch.SketchLines.AddAsTwoPointRectangle
-                (DataClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(array[i, 0], array[i, 1]),
-                DataClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(array[i, 2], array[i, 3]));
+                (OptionsInventorClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(array[i, 0], array[i, 1]),
+                OptionsInventorClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(array[i, 2], array[i, 3]));
             }
 
-            СonstructionClassProd.Const(DataClass.oCompDefForm(), _Sketch, DataClass.thicknessProgamForm(-1), 0);
+            СonstructionClassProd.Const(OptionsInventorClass.oCompDefForm(), _Sketch, DataClass.thicknessProgamForm(-1), 0);
         }
 
         public void Delete()

@@ -32,7 +32,7 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
             newProj = new newProject(Inve.InitInventor());
             newProj.calculation();
 
-            DataClass = new Data(Inve.InitInventor(), newProj.oPartDoc(), newProj.oCompDef());
+            DataClass = new Data();
         }
 
         //Проверка включен ли Inventor

@@ -142,3 +142,8 @@ C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\ла
 C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\лаба 3\табуретка 8-4\Inventor_Help_Examples_in_CSharp_Features_1\obj\x86\Debug\Inventor_Help_Examples_in_CSharp_Features_1.csproj.GenerateResource.Cache
 C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\лаба 4\табуретка 8-4\Inventor_Help_Examples_in_CSharp_Features_1\obj\x86\Debug\Inventor_Help_Examples_in_CSharp_Features_1.exe
 C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\лаба 4\табуретка 8-4\Inventor_Help_Examples_in_CSharp_Features_1\obj\x86\Debug\Inventor_Help_Examples_in_CSharp_Features_1.pdb
+C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\лаба 4\табуретка 8-4\Inventor_Help_Examples_in_CSharp_Features_1\bin\Debug\Inventor_Help_Examples_in_CSharp_Features_1.exe
+C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\лаба 4\табуретка 8-4\Inventor_Help_Examples_in_CSharp_Features_1\bin\Debug\Inventor_Help_Examples_in_CSharp_Features_1.pdb
+C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\лаба 4\табуретка 8-4\Inventor_Help_Examples_in_CSharp_Features_1\obj\x86\Debug\Inventor_Help_Examples_in_CSharp_Features_1.MainForm.resources
+C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\лаба 4\табуретка 8-4\Inventor_Help_Examples_in_CSharp_Features_1\obj\x86\Debug\Inventor_Help_Examples_in_CSharp_Features_1.Properties.Resources.resources
+C:\Users\Sergey\Desktop\учеба\учеба 7 семестр\ОРСапр\лаба 4\табуретка 8-4\Inventor_Help_Examples_in_CSharp_Features_1\obj\x86\Debug\Inventor_Help_Examples_in_CSharp_Features_1.csproj.GenerateResource.Cache

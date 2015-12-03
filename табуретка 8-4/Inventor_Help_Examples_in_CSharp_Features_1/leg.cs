@@ -21,19 +21,19 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
         Сonstruction СonstructionClassLeg = new Сonstruction();
 
 
-        public void AddLeg(Data DataClass)
+        public void AddLeg(Data DataClass, OptionsInventor OptionsInventorClass)
         {
             this._couplingLeg = DataClass.couplingLegForm(-1);
-            _Sketch = DataClass.oCompDefForm().Sketches.Add(DataClass.oCompDefForm().WorkPlanes[3]);
+            _Sketch = OptionsInventorClass.oCompDefForm().Sketches.Add(OptionsInventorClass.oCompDefForm().WorkPlanes[3]);
             
             for (int i = 0; i <= 1; i++)
                 for (int j = 0; j <= 1; j++)
                 {
                     _Sketch.SketchLines.AddAsTwoPointRectangle
-                        (DataClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(System.Math.Pow(-1, i) * DataClass.overhangForm(-1), System.Math.Pow(-1, j) * DataClass.overhangForm(-1)),
-                        DataClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(System.Math.Pow(-1, i) * DataClass.overhangForm(-1) - System.Math.Pow(-1, i) * DataClass.thicknessLegForm(-1), System.Math.Pow(-1, j) * DataClass.overhangForm(-1) - System.Math.Pow(-1, j) * DataClass.thicknessLegForm(-1)));
+                        (OptionsInventorClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(System.Math.Pow(-1, i) * DataClass.overhangForm(-1), System.Math.Pow(-1, j) * DataClass.overhangForm(-1)),
+                        OptionsInventorClass.ThisApplicationForm().TransientGeometry.CreatePoint2d(System.Math.Pow(-1, i) * DataClass.overhangForm(-1) - System.Math.Pow(-1, i) * DataClass.thicknessLegForm(-1), System.Math.Pow(-1, j) * DataClass.overhangForm(-1) - System.Math.Pow(-1, j) * DataClass.thicknessLegForm(-1)));
                 }
-            СonstructionClassLeg.Const(DataClass.oCompDefForm(), _Sketch, DataClass.lengthLegForm(-1), _couplingLeg);
+            СonstructionClassLeg.Const(OptionsInventorClass.oCompDefForm(), _Sketch, DataClass.lengthLegForm(-1), _couplingLeg);
          }
 
         public void Delete()

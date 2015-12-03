@@ -27,17 +27,6 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
         private double _distanceSideBar;
         private double _thicknessSideBar;
 
-
-        private PartDocument _PartDoc = default(PartDocument);
-        private PartComponentDefinition _CompDef = default(PartComponentDefinition);
-        private Inventor.Application ThisApplication;
-
-         public Data(Inventor.Application ThisApplication, PartDocument oPartDoc, PartComponentDefinition oCompDef)
-         {
-            this.ThisApplication = ThisApplication;
-            this._PartDoc = oPartDoc;
-            this._CompDef = oCompDef;
-         }
         // Сидушки
          public double widthSeatForm(double _widthSeat1)
          {
@@ -126,22 +115,6 @@ namespace Inventor_Help_Examples_in_CSharp_Features_1
              this._thicknessSideBar = _thicknessSideBar1;
 
              return _thicknessSideBar;
-         }
-
-        //Параметры инвентора
-         public PartDocument oPartDocForm()
-         {
-             return _PartDoc;
-         }
-
-         public PartComponentDefinition oCompDefForm()
-         {
-             return _CompDef;
-         }
-
-         public  Inventor.Application ThisApplicationForm()
-         {
-             return ThisApplication;
          }
 
     }
