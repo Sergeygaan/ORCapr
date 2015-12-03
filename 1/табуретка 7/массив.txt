@@ -1,0 +1,22 @@
+                PartDocument oAssyDoc  = (PartDocument)ThisApplication.ActiveDocument; ;
+                PartComponentDefinition oAssyDef = oAssyDoc.ComponentDefinition;
+
+                //AssemblyDocument oAssyDoc = (AssemblyDocument)ThisApplication.ActiveDocument;
+                //AssemblyComponentDefinition oAssyDef = oAssyDoc.ComponentDefinition;
+
+
+                ////base work axes
+                WorkAxis XAxis = oAssyDef.WorkAxes[1];
+                //WorkAxis YAxis = oAssyDef.WorkAxes[2];
+                //WorkAxis ZAxis = oAssyDef.WorkAxes[3];
+
+
+                ObjectCollection objCol = ThisApplication
+                    .TransientObjects.CreateObjectCollection();
+
+            OccurrencePatterns pat = default(OccurrencePatterns);
+                //Creating a Circular pattern
+                objCol.Add(oAssyDef.Occurrences[56]);
+
+
+            pat.AddCircularPattern(objCol, XAxis, true, "90 deg", 4);

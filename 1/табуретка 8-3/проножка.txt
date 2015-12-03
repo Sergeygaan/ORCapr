@@ -1,0 +1,7 @@
+ double[,] array =
+                {
+                {(overhang - thicknessLeg), (overhang - thicknessLeg) + 0.2 * thicknessLeg, (-overhang + thicknessLeg), (overhang) - 0.2 * thicknessLeg},
+                {(-overhang + thicknessLeg) - 0.2 * thicknessLeg, (overhang - thicknessLeg), (-overhang) + 0.2 * thicknessLeg, (-overhang + thicknessLeg)},
+                {-overhang + thicknessLeg, (-overhang + thicknessLeg) - 0.2 * thicknessLeg, overhang - thicknessLeg, (-overhang) + 0.2 * thicknessLeg},
+                {(overhang - thicknessLeg) + 0.2 * thicknessLeg, (-overhang + thicknessLeg), overhang - 0.2 * thicknessLeg, (overhang - thicknessLeg) },
+                };
